@@ -10,4 +10,11 @@ function showDropdown(e) {
     else {
         e.target.setAttribute('data-showDropdown', false)
     }
+
+    const dropdownItems = document.querySelectorAll('.dropdown-item');
+    dropdownItems.forEach(item => {
+        item.addEventListener('click', () => {
+            e.target.setAttribute('data-showDropdown', false)
+        })
+    })
 }
